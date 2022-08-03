@@ -14,9 +14,7 @@ public class App
         buffaloChicken.addInstruction("Add more buffalo sauce");
 
         GumboIngredient<Integer> rerefriedBeans = new GumboIngredient<>("Re-refried Beans", Measurement.HANDFUL, 1);
-        rerefriedBeans.addInstruction("wash hands");
-        rerefriedBeans.addInstruction("add beans");
-        rerefriedBeans.addInstruction("rewash hands");
+
 
         GumboIngredients gumboIngredients = GumboIngredients.getInstance();
 
