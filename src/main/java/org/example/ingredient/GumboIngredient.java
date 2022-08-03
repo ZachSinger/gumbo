@@ -16,14 +16,24 @@ public class GumboIngredient<T extends Number> extends Ingredient<T>{
     }
 
     @Override
+    public String getIngredientInformation() {
+        return new StringBuilder()
+                .append(quantity)
+                .append(" ")
+                .append(measurementType)
+                .append(" ")
+                .append(name)
+                .toString();
+    }
+
+    @Override
     public String getInstructionPrintout() {
         StringBuilder sb = new StringBuilder();
 
         for(int i = 0; i < instructions.size(); i++){
-            sb.append(i + 1)
-                    .append(": ")
-                    .append(instructions.get(i))
-                    .append("\n");
+            String prefix = i > 0 ? "\n- " : "- ";
+            sb.append(prefix)
+                .append(instructions.get(i));
         }
 
         return sb.toString();

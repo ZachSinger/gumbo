@@ -13,7 +13,13 @@ public class App
         buffaloChicken.addInstruction("Mince up the meat");
         buffaloChicken.addInstruction("Add more buffalo sauce");
 
-        List<iIngredient> gumboIngredients = GumboIngredients.getInstance().getIngredients();
-        System.out.println(gumboIngredients.get(0).getInstructionPrintout());
+        GumboIngredient<Integer> rerefriedBeans = new GumboIngredient<>("Re-refried Beans", Measurement.HANDFUL, 1);
+        rerefriedBeans.addInstruction("wash hands");
+        rerefriedBeans.addInstruction("add beans");
+        rerefriedBeans.addInstruction("rewash hands");
+
+        GumboIngredients gumboIngredients = GumboIngredients.getInstance();
+
+        gumboIngredients.printAllInstructions();
     }
 }

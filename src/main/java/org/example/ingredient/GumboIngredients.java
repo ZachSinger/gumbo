@@ -25,4 +25,13 @@ public class GumboIngredients {
     public void addIngredient(iIngredient ingredient){
         ingredients.add(ingredient);
     }
+
+    public void printAllInstructions(){
+        ingredients.stream()
+                .forEach(ingredient -> {
+                    System.out.println(ingredient.getIngredientInformation());
+                    System.out.println(ingredient.getInstructionPrintout());
+                    System.out.println();
+                });
+    }
 }
